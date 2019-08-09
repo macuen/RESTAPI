@@ -1,30 +1,27 @@
-package com.aexp.esi.esiapi;
-
-import com.aexp.esi.esiapi.dao.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
-import java.awt.print.Pageable;
-import java.util.List;
-import java.util.Optional;
-
-@Service
-public class AccountService {
-
-    //create repository in controller, instance property for controller class, dependency injection to inject instance of this interface
-    @Autowired
-    private AccountRepository accountRepository; //now we can call repository interface
-
-//    public List<OracleMapping> getOracleMappingByDbStatusCD(String dbStatusCD, PageRequest pageRequest) { //SEEK MORE INFO//////////////////////
-////        return accountRepository.getOracleMappingByDbStatusCD(dbStatusCD, PageRequest.of(0,20)); //SEEK MORE INFO///////////////////////////////////
-////    }
-    public List<OracleMapping> findAllByStatusCD(String dbStatusCD, PageRequest pageRequest){
-        return accountRepository.findAllByDbStatusCD(dbStatusCD, PageRequest.of(0,20));
-    }
-}
+//package com.aexp.esi.esiapi;
+//
+//import com.aexp.esi.esiapi.dao.AccountRepository;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.domain.PageRequest;
+//import org.springframework.stereotype.Service;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import java.awt.print.Pageable;
+//import java.util.List;
+//import java.util.Optional;
+//
+//@Service
+//public class AccountService {
+//
+//    //create repository in controller, instance property for controller class, dependency injection to inject instance of this interface
+//    @Autowired
+//    private AccountRepository accountRepository; //now we can call repository interface
+//
+//    public List<OracleMapping> getAllByDbStatusCD(String dbStatusCD){
+//        return accountRepository.getAllByDbStatusCD(dbStatusCD);
+//    }
+//
+//}
+//
 
 
 
@@ -33,7 +30,11 @@ public class AccountService {
 
 
 
-
+///////////////////////////////////////////////
+////////////CODE NOT IN USE////////////////////
+////////////CODE NOT IN USE////////////////////
+////////////CODE NOT IN USE////////////////////
+///////////////////////////////////////////////
 
 //     class StCode {
 //            private String code;
@@ -89,3 +90,10 @@ public class AccountService {
 //                } catch (IOException e) {
 //                e.printStackTrace();
 //                }
+
+//    public List<OracleMapping> findAllByStatusCD(String dbStatusCD, PageRequest pageRequest){
+//        return accountRepository.findAllByDbStatusCD(dbStatusCD, PageRequest.of(0,20));
+//    }
+//    public List<OracleMapping> getAllByDbStatusCDIs(String dbStatusCD, PageRequest pageRequest){
+//        return accountRepository.getAllByDbStatusCDIs(dbStatusCD, PageRequest.of(4,20));
+//    }

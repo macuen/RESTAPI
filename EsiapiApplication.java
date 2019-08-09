@@ -1,25 +1,16 @@
 package com.aexp.esi.esiapi;
 
+import com.aexp.esi.esiapi.controller.AccountController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 
-import java.awt.print.Pageable;
-import java.util.List;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
-public class EsiapiApplication implements CommandLineRunner {
-    //to call AccountService class later on
-    @Autowired
-    private AccountService accountService;
-    //main method
+public class EsiapiApplication {
     public static void main(String[] args) { SpringApplication.run(EsiapiApplication.class, args); }
-    @Override
-    public void run(String... args) throws Exception{
-    System.out.println("Test");
-    }
+
 }
